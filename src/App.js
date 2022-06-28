@@ -18,16 +18,23 @@ function App() {
   function changeC(event) {
     setC((prevC) => (prevC = event.target.value));
     setF((prevF) => (prevF = ctof(event.target.value)));
-    return (<C onChange={changeC}>{c}</C>), (<F onChange={changeF}>{f}</F>);
+    return (
+      <>
+        <C onChange={changeC}>{c}</C>
+        <F onChange={changeF}>{f}</F>
+      </>
+    );
   }
 
   function changeF(event) {
     setF((prevF) => (prevF = event.target.value));
-    console.log(f);
-
     setC((prevC) => (prevC = ftoc(event.target.value)));
-    console.log(c);
-    return (<C onChange={changeC}>{c}</C>), (<F onChange={changeF}>{f}</F>);
+    return (
+      <>
+        <C onChange={changeC}>{c}</C>
+        <F onChange={changeF}>{f}</F>
+      </>
+    );
   }
 
   return (
